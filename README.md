@@ -17,7 +17,7 @@ untuk menjalankan project di local hanya ikuti langkah berikut:
 - Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/FrindiM/Aplikasi-keuangan-sederhana-RK-BMR-2023.git
 ```
 
 
@@ -29,5 +29,5 @@ untuk menjalankan project di local hanya ikuti langkah berikut:
 
 ## Support
 
-For support, email fake@fake.com or join our Slack channel.
+For support, email friendymangimbulude@gmail.com or join our Slack channel.
 
