@@ -1,5 +1,6 @@
 
-# Aplikasi Keuangan RK BMR
+# Aplikasi Keuangan RK BMR 🚧
+**Perhatian: Aplikasi ini masih dalam tahap pengembangan dan belum siap untuk digunakan.**
 
 Ini adalah aplikasi yang saya kembangkan atas permintaan dari panitia pemilihan putra-putri RK BMR
 
