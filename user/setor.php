@@ -69,7 +69,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="noHp" class="form-label">No.Hp</label>
-                    <input type="text" class="form-control" id="noHp" name="noHp" required>
+                    <input type="text" class="form-control" id="noHp" name="noHp" value="0" required>
                 </div>
                 <div class="mb-3">
                     <label for="sumberDana" class="form-label">Sumber Dana</label>

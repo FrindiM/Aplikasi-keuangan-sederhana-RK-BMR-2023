@@ -4,158 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Include Google Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        /* Gaya CSS Anda yang sudah ada di sini */
+    <title>login</title>
 
-        .custom-btn {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid #ccc;
-            border-radius: 8px;
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(4, 181, 252), rgb(255, 0, 212), red);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .card {
+            width: 80%;
+            max-width: 400px;
+            margin: auto;
+            /* Menggunakan 'auto' pada margin akan menengahkan secara horizontal */
+            margin-top: 10vh;
+            /* Memberikan jarak atas dengan menggunakan viewport height */
+            margin-bottom: 10vh;
+            /* Memberikan jarak bawah dengan menggunakan viewport height */
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.4);
             padding: 20px;
+            text-align: center;
+            background-color: white;
+            display: flex;
+            /* Menggunakan flexbox */
+            flex-direction: column;
+            /* Menjadikan child elemen menjadi kolom */
+            justify-content: center;
+            /* Menengahkan secara vertikal */
+        }
+
+
+        .input {
+            margin-bottom: 20px;
+            padding: 9px;
+            width: 80%;
+            /* Menggunakan persentase agar input menyesuaikan dengan lebar card */
+            border: none;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .btnSubmit {
+            /* width: 20px; */
+            padding: 10px;
+            border-radius: 5px;
+            width: 50%;
+            /* Menggunakan persentase agar tombol menyesuaikan dengan lebar card */
+            border-color: azure;
+            color: azure;
+            border: 1px;
+            box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            font-weight: 900;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: linear-gradient(to right, rgb(4, 181, 252), rgb(255, 0, 212));
+        }
+
+        .btnRegister,
+        .btnLogin {
+            color: rgb(0, 183, 255);
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: small;
+        }
+
+        form {
             margin-bottom: 20px;
         }
 
-        .custom-btn .material-icons {
-            font-size: 48px;
+        .tampil {
+            display: block;
         }
 
-        .custom-btn p {
-            font-size: 24px;
-            font-weight: bold;
+        .sembunyi {
+            display: none;
         }
 
-        @media (max-width: 767px) {
-            .custom-btn {
-                margin-bottom: 10px;
+        .in {
+            opacity: 1;
+        }
+
+        .out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Media queries */
+        @media screen and (max-width: 600px) {
+            .card {
+                width: 90%;
             }
-        }
-
-        .navbar {
-            border: 2px solid #ccc;
-            font-weight: bold;
-        }
-
-        .navbar-brand {
-            font-size: 24px;
-        }
-
-        .navbar-text {
-            text-align: center;
-            flex: 1;
-            font-size: 24px;
-        }
-
-        .navbar-logo {
-            width: 50px;
-            height: 50px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f9fa;
-            border-top: 2px solid #ccc;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .info-box {
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .info-box img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .info-box h6 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .info-box p {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 5px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="download.jpeg" alt="Logo" class="navbar-logo">
-            </a>
-            <div class="navbar-text">
-                APLIKASI KAS RK-BMR
+    <div class="container">
+        <div class="card">
+            <div class="form-login">
+                <h1 class="card-title">Login</h1>
+                <form action="" class="Lform">
+                    <input type="text" class="input login-user" name="" id="" placeholder="Username">
+                    <input type="password" class="input login-pass" name="" id="" placeholder="Password"><br>
+                    <button type="submit" class="btnSubmit">Submit</button>
+                </form>
+                <a class="btnRegister" href="#">Register?</a>
             </div>
-        </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-md-4 mt-2">
-                <a href="setor.php" class="btn btn-lg btn-block custom-btn mb-2">
-                    <span class="material-icons">account_balance_wallet</span>
-                    <p>Setor Dana</p>
-                </a>
-            </div>
-            <div class="col-md-4 mt-2">
-                <a href="tarik.php" class="btn btn-lg btn-block custom-btn mb-2">
-                    <span class="material-icons">attach_money</span>
-                    <p>Tarik Dana</p>
-                </a>
-            </div>
-            <div class="col-md-4 mt-2">
-                <a href="rekap.php" class="btn btn-lg btn-block custom-btn mb-2">
-                    <span class="material-icons">monetization_on</span>
-                    <p>Rekap Dana</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- Informasi Nomor Rekening dan E-Wallet -->
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="info-box">
-                    <img src="download.jpeg" alt="Logo" class="mb-3">
-                    <h6 class="mb-3">Bagi yang telah melakukan pendaftaran penyetoran dana harap mentransfer dana tersebut ke rekening atau e-walet dibawah, atau hubungi bendahara untuk konfirmasi</h6>
-                    <p>Nama Bank : Bank Hana</p>
-                    <p>Atas Nama : Frindi Mangimbulude</p>
-                    <p>Nomor Rekening: 19975926680</p>
-                    <p>Dana, OVO, Gopay, ShopeePay</p>
-                    <p>085242436146</p>
-                </div>
+            <div class="form-register sembunyi">
+                <h1>Daftar</h1>
+                <form action="">
+                    <input type="text" class="input" name="" id="" placeholder="Nama lengkap">
+                    <input type="text" class="input" name="" id="" placeholder="Username">
+                    <input type="password" class="input" name="" id="" placeholder="Password">
+                    <button type="submit" class="btnSubmit">Register</button>
+                </form>
+                <a class="btnLogin" href="">Login</a>
             </div>
         </div>
     </div>
-
-    <!-- Footer
-    <div class="footer">
-        &copy; 2023 Bendahara RK
-    </div> -->
-
-    <!-- Include Bootstrap JS (Optional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

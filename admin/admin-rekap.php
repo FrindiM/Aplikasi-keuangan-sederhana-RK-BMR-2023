@@ -21,7 +21,7 @@ if (isset($_POST['validasi'])) {
     mysqli_query($conn, $updateQuery);
 }
 
-$query = "SELECT * FROM rekap";
+$query = "SELECT * FROM rekap ORDER BY id DESC";
 $result = mysqli_query($conn, $query);
 ?>
 

@@ -98,8 +98,9 @@
 
         <h2>Kas Panitia</h2>
         <hr>
-        <a href="laporan/export_rekam_pdf.php" class="btn btn-primary" style="margin-bottom: 10px;" target="_blank">Export to PDF</a>
-        <a href="laporan/export_rekam_excel.php" class="btn btn-warning" style="margin-bottom: 10px;" target="_blank">Export to Excel</a>
+        <!--<a href="laporan/export_rekam_pdf.php" class="btn btn-primary" style="margin-bottom: 10px;" target="_blank">Export to PDF</a>
+        
+        href="laporan/export_rekam_excel.php" class="btn btn-warning" style="margin-bottom: 10px;" target="_blank">Export to Excel</a>-->
         <div class="panel panel-danger">
             <div class="panel-heading">
                 Data Kas Masuk

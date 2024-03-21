@@ -69,7 +69,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="noHp" class="form-label">No.Hp</label>
-                    <input type="text" class="form-control" id="noHp" name="noHp" required>
+                    <input type="text" class="form-control" id="noHp" name="noHp" value="0" required>
                 </div>
                 <div class="mb-3">
                     <label for="sumberDana" class="form-label">Tujuan Dana</label>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="penerima" class="form-label">No.Rekening yang akan dikirim dana</label>
-                    <input type="text" class="form-control" id="penerima" name="penerima" required>
+                    <input type="text" class="form-control" id="penerima" name="penerima" value="0" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Bidang</label>
@@ -138,7 +138,7 @@
                         <label class="form-check-label" for="sieKeamananRadio">Sie.Keamanan</label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Setor Uang</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Ajukan Dana</button>
             </form>
 
 
