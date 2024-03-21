@@ -119,7 +119,7 @@
                     <input type="password" class="input" name="" id="" placeholder="Password">
                     <button type="submit" class="btnSubmit">Register</button>
                 </form>
-                <a class="btnLogin" href="">Login</a>
+                <a class="btnLogin" href="">Masuk</a>
             </div>
         </div>
     </div>
