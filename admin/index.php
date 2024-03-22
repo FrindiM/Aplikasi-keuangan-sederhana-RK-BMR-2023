@@ -1,3 +1,13 @@
+<?php
+session_start();
+$user = $_SESSION['user'];
+$role = $_SESSION['role'];
+
+if ($role != "admin") {
+    header("Location: ../");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +89,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="download.jpeg" alt="Logo" class="navbar-logo">
+                <img src="../public/download.jpeg" alt="Logo" class="navbar-logo">
             </a>
             <div class="navbar-text"> <!-- Added navbar text div -->
                 APLIKASI KAS RK-BMR
@@ -90,18 +100,18 @@
     <!-- Content -->
     <div class="container mt-4">
         <div class="row justify-content-center">
-            <div class="col-md-4 mt-2">
+            <!-- <div class="col-md-4 mt-2">
                 <a href="admin-masuk.php" class="btn btn-lg btn-block custom-btn mb-2">
                     <span class="material-icons">account_balance_wallet</span>
                     <p>Setor Dana</p>
                 </a>
-            </div>
-            <div class="col-md-4 mt-2">
+            </div> -->
+            <!-- <div class="col-md-4 mt-2">
                 <a href="admin-keluar.php" class="btn btn-lg btn-block custom-btn mb-2">
                     <span class="material-icons">attach_money</span>
                     <p>Tarik Dana</p>
                 </a>
-            </div>
+            </div> -->
             <div class="col-md-4 mt-2">
                 <a href="admin-rekap.php" class="btn btn-lg btn-block custom-btn mb-2">
                     <span class="material-icons">monetization_on</span>

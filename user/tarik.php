@@ -1,3 +1,13 @@
+<?php
+session_start();
+$user = $_SESSION['user'];
+$role = $_SESSION['role'];
+
+if ($role != "user") {
+    header("Location: ../");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +60,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="download.jpeg" alt="Logo" class="navbar-logo">
+                <img src="../public/download.jpeg" alt="Logo" class="navbar-logo">
             </a>
             <div class="navbar-text"> <!-- Ditambahkan div teks navbar -->
                 APLIKASI KAS RK-BMR / Tarik Dana
@@ -62,7 +72,7 @@
     <div class="container">
         <div class="form-container">
             <h2 class="text-center mb-4">Form Tarik Dana</h2>
-            <form action="proses-tarik.php" method="POST">
+            <form action="../funtion/proses-tarik.php" method="POST">
                 <div class="mb-3">
                     <label for="namaLengkap" class="form-label">Nama Lengkap</label>
                     <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" required>

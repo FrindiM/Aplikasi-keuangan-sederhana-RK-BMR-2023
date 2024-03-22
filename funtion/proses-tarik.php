@@ -1,4 +1,12 @@
 <?php
+session_start();
+$user = $_SESSION['user'];
+$role = $_SESSION['role'];
+
+if ($role != "user") {
+    header("Location: ../");
+}
+
 // Kode untuk menyimpan data setoran ke database Anda
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil data dari form
@@ -86,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="download.jpeg" alt="Logo" class="navbar-logo">
+                <img src="../public/download.jpeg" alt="Logo" class="navbar-logo">
             </a>
             <div class="navbar-text"> <!-- Ditambahkan div teks navbar -->
                 APLIKASI KAS RK-BMR
@@ -104,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             <?php } ?>
 
-            <a href="index.php" class="btn btn-primary">Kembali</a>
+            <a href="../user/index.php" class="btn btn-primary">Kembali</a>
         </div>
     </div>
 

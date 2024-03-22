@@ -45,6 +45,11 @@
             border-bottom: 1px solid #ccc;
         }
 
+        .input:focus {
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+
         .btnSubmit {
             /* width: 20px; */
             padding: 10px;
@@ -104,9 +109,9 @@
         <div class="card">
             <div class="form-login">
                 <h1 class="card-title">Login</h1>
-                <form action="" class="Lform">
-                    <input type="text" class="input login-user" name="" id="" placeholder="Username">
-                    <input type="password" class="input login-pass" name="" id="" placeholder="Password"><br>
+                <form action="funtion/loginProses.php" class="Lform" method="post">
+                    <input type="text" class="input login-user" name="username" id="" placeholder="Username">
+                    <input type="password" class="input login-pass" name="password" id="" placeholder="Password"><br>
                     <button type="submit" class="btnSubmit">Submit</button>
                 </form>
                 <a class="btnRegister" href="#">Register?</a>
@@ -123,8 +128,7 @@
             </div>
         </div>
     </div>
-    <script src="jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
+
 </body>
 
 </html>

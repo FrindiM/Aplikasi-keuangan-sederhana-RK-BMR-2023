@@ -1,5 +1,10 @@
 <?php
-include('koneksi.php');
+include('../funtion/koneksi.php');
+
+// Pagination
+$limit = 10; // Jumlah data per halaman
+$page = isset($_GET['page']) ? $_GET['page'] : 1; // Halaman saat ini, default 1
+$start = ($page - 1) * $limit; // Index data awal untuk query
 
 if (isset($_POST['validasi'])) {
     $id = $_POST['id'];
@@ -21,7 +26,17 @@ if (isset($_POST['validasi'])) {
     mysqli_query($conn, $updateQuery);
 }
 
-$query = "SELECT * FROM rekap ORDER BY id DESC";
+// Menghitung total data
+$queryTotal = "SELECT count(*) as total FROM rekap";
+$resultTotal = mysqli_query($conn, $queryTotal);
+$rowTotal = mysqli_fetch_assoc($resultTotal);
+$totalData = $rowTotal['total'];
+
+// Menghitung total halaman
+$totalPages = ceil($totalData / $limit);
+
+// Mengambil data dengan limit
+$query = "SELECT * FROM rekap ORDER BY id DESC LIMIT $start, $limit";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -73,6 +88,17 @@ $result = mysqli_query($conn, $query);
                 ?>
             </tbody>
         </table>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <?php
+                for ($i = 1; $i <= $totalPages; $i++) {
+                    echo '<li class="page-item"><a class="page-link" href="?page=' . $i . '">' . $i . '</a></li>';
+                }
+                ?>
+            </ul>
+        </nav>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

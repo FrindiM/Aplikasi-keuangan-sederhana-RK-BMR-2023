@@ -1,3 +1,12 @@
+<?php
+session_start();
+$user = $_SESSION['user'];
+$role = $_SESSION['role'];
+
+if ($role != "user") {
+    header("Location: ../");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,6 +103,15 @@
             font-weight: bold;
             margin-bottom: 5px;
         }
+
+        .btn-logout {
+            border: 1px solid black;
+            border-radius: 5px;
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+
+        }
     </style>
 </head>
 
@@ -102,11 +120,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="download.jpeg" alt="Logo" class="navbar-logo">
+                <img src="../public/download.jpeg" alt="Logo" class="navbar-logo">
             </a>
             <div class="navbar-text">
                 APLIKASI KAS RK-BMR
             </div>
+            <a href="../funtion/logout.php" class="btn-logout">LogOut</a>
         </div>
     </nav>
 
@@ -137,7 +156,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="info-box">
-                    <img src="download.jpeg" alt="Logo" class="mb-3">
+                    <img src="../assets/download.jpeg" alt="Logo" class="mb-3">
                     <h6 class="mb-3">Bagi yang telah melakukan pendaftaran penyetoran dana harap mentransfer dana tersebut ke rekening atau e-walet dibawah, atau hubungi bendahara untuk konfirmasi</h6>
                     <p>Nama Bank : Bank Hana</p>
                     <p>Atas Nama : Frindi Mangimbulude</p>
